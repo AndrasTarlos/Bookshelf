@@ -11,13 +11,13 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="bookshelf" />
+          <element id="module-output" name="Bookshelf" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/bookshelf-1.0/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="bookshelf/web/Web" />
+      <element id="javaee-facet-resources" facet="Bookshelf/web/Web" />
     </root>
   </artifact>
 </component>
