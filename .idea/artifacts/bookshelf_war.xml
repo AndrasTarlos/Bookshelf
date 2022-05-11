@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bookshelf:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bookshelf</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="bookshelf-1.0.war">
+      <element id="artifact" artifact-name="bookshelf:war exploded" />
+    </root>
+  </artifact>
+</component>
