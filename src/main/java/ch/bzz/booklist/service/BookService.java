@@ -29,14 +29,15 @@ public class BookService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response readBook(@QueryParam("uuid") String bookUUID) {
-        if (null != DataHandler.getInstance().readBookByUUID(bookUUID)) {
+        if (bookUUID.matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}")) {
             Book book = DataHandler.getInstance().readBookByUUID(bookUUID);
             Response response = Response
                     .status(200)
                     .entity(book)
                     .build();
             return response;
+        } else {
+            throw new IllegalArgumentException();
         }
-        return Response.status(400).build();
     }
 }
